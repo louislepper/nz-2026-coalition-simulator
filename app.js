@@ -3,8 +3,8 @@
   const parties = data.parties.map(p => ({ ...p, total: p.electorate + p.list }));
   const TOTAL = data.totalSeats;
   const MAJORITY = Math.floor(TOTAL / 2) + 1;
-  const DEFAULTS = { lab: 'left', nat: 'right' };
-  const STORAGE_KEY = 'nz2026-coalition';
+  const DEFAULTS = { lab: 'left', grn: 'left', nat: 'right', act: 'right' };
+  const STORAGE_KEY = 'nz2026-coalition-v2';
 
   const zones = {
     left: document.getElementById('zone-left'),

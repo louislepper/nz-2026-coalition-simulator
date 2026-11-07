@@ -8,3 +8,7 @@ Data is from the [Electoral Commission preliminary count](https://electionresult
 Plain HTML/CSS/JS, no build step. Deployed to GitHub Pages by the workflow in `.github/workflows/pages.yml`.
 
 Run locally with any static server, e.g. `python3 -m http.server`.
+
+## Licence
+
+MIT, see `LICENSE`.
