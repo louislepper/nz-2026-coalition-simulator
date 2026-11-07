@@ -1,0 +1,53 @@
+:root {
+  --bg: #f6f6f4; --fg: #1b1b1b; --muted: #6a6a6a; --card: #fff; --border: #d9d9d4;
+  --left: #d82a20; --right: #00529f; --zone: #ececea;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #15161a; --fg: #ececec; --muted: #9a9a9a; --card: #22242a; --border: #3a3c44; --zone: #1c1e24; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--fg); padding: 16px; }
+header, main, footer { max-width: 1100px; margin: 0 auto; }
+h1 { margin: 0 0 4px; font-size: 1.6rem; }
+h2 { font-size: 1rem; margin: 0 0 8px; }
+.muted { color: var(--muted); font-size: 0.85rem; }
+a { color: inherit; }
+
+.summary { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0 8px; }
+.summary .bloc { padding: 12px 16px; border-radius: 10px; border: 2px solid var(--border); background: var(--card); }
+.summary .bloc.left { border-color: var(--left); }
+.summary .bloc.right { border-color: var(--right); }
+.summary .big { font-size: 2rem; font-weight: 700; line-height: 1.1; }
+.summary .majority { font-weight: 600; }
+.summary .ok { color: #1a8a3a; }
+.summary .no { color: var(--muted); }
+
+.hemicycle-wrap { margin: 0 auto 12px; max-width: 560px; }
+#hemicycle { width: 100%; height: auto; display: block; }
+
+.columns { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.column { background: var(--zone); border-radius: 10px; padding: 10px; min-height: 240px; }
+.column.left h2 { color: var(--left); }
+.column.right h2 { color: var(--right); }
+.bloc-stats { font-size: 0.8rem; color: var(--muted); margin-bottom: 8px; min-height: 1.2em; }
+.dropzone { min-height: 180px; display: flex; flex-direction: column; gap: 8px; border-radius: 8px; transition: background .15s; }
+.dropzone.over { background: rgba(127,127,127,0.18); outline: 2px dashed var(--muted); }
+
+.card { background: var(--card); border: 1px solid var(--border); border-left: 8px solid var(--swatch); border-radius: 8px;
+  padding: 8px 10px; cursor: grab; user-select: none; display: grid; grid-template-columns: auto 1fr auto; gap: 8px; align-items: center; }
+.card.dragging { opacity: 0.4; }
+.card .name { font-weight: 600; }
+.card .detail { font-size: 0.78rem; color: var(--muted); }
+.card .seats { font-size: 1.3rem; font-weight: 700; text-align: right; }
+.card .seats small { display: block; font-size: 0.7rem; font-weight: 400; color: var(--muted); }
+.card .mv { display: flex; flex-direction: column; gap: 2px; }
+.card .mv button { font-size: 0.7rem; padding: 2px 5px; cursor: pointer; background: var(--zone); color: var(--fg); border: 1px solid var(--border); border-radius: 4px; }
+.card .mv button:disabled { opacity: 0.3; cursor: default; }
+button#reset { background: none; border: 1px solid var(--border); color: var(--fg); padding: 4px 10px; border-radius: 6px; cursor: pointer; }
+
+@media (max-width: 720px) {
+  .columns { grid-template-columns: 1fr; }
+  .column { min-height: 0; }
+  .dropzone { min-height: 60px; }
+  .summary .big { font-size: 1.5rem; }
+}

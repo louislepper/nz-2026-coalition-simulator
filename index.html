@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NZ 2026 Coalition Simulator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>NZ 2026 Coalition Simulator</h1>
+  <p id="status" class="muted"></p>
+</header>
+
+<main>
+  <section class="summary" id="summary"></section>
+  <div class="hemicycle-wrap"><svg id="hemicycle" viewBox="0 0 400 210" role="img" aria-label="Seat chart"></svg></div>
+
+  <section class="columns">
+    <div class="column left" data-bloc="left">
+      <h2>Coalition A</h2>
+      <div class="bloc-stats" id="stats-left"></div>
+      <div class="dropzone" id="zone-left"></div>
+    </div>
+    <div class="column middle" data-bloc="none">
+      <h2>Unaligned</h2>
+      <div class="bloc-stats" id="stats-none"></div>
+      <div class="dropzone" id="zone-none"></div>
+    </div>
+    <div class="column right" data-bloc="right">
+      <h2>Coalition B</h2>
+      <div class="bloc-stats" id="stats-right"></div>
+      <div class="dropzone" id="zone-right"></div>
+    </div>
+  </section>
+
+  <p class="muted hint">Drag a party card between columns, or use the ◀ ▶ buttons. Tap a card on mobile to move it.</p>
+  <p class="muted"><button id="reset" type="button">Reset to defaults</button></p>
+</main>
+
+<footer class="muted">
+  Data from the <a href="https://electionresults.govt.nz/ge2026/">Electoral Commission</a>.
+  Seats shown as electorate + list. Parliament has <span id="total-seats"></span> seats because of overhang;
+  a majority needs <span id="majority"></span>.
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

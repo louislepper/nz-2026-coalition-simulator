@@ -1,0 +1,14 @@
+{
+  "source": "https://electionresults.govt.nz/ge2026/",
+  "status": "Preliminary count, 100% of results counted, as at 7 November 2026",
+  "totalSeats": 131,
+  "parties": [
+    { "id": "nat", "name": "National", "short": "NAT", "colour": "#00529f", "votePct": 29.21, "electorate": 42, "list": 0 },
+    { "id": "lab", "name": "Labour", "short": "LAB", "colour": "#d82a20", "votePct": 29.36, "electorate": 21, "list": 15 },
+    { "id": "grn", "name": "Green", "short": "GP", "colour": "#098137", "votePct": 13.30, "electorate": 2, "list": 14 },
+    { "id": "act", "name": "ACT", "short": "ACT", "colour": "#fde401", "text": "#222", "votePct": 10.92, "electorate": 1, "list": 12 },
+    { "id": "nzf", "name": "NZ First", "short": "NZF", "colour": "#000000", "votePct": 9.78, "electorate": 0, "list": 12 },
+    { "id": "top", "name": "Opportunity Party", "short": "TOP", "colour": "#32dac3", "text": "#222", "votePct": 5.96, "electorate": 0, "list": 7 },
+    { "id": "tpm", "name": "Te Pāti Māori", "short": "TPM", "colour": "#b3001b", "votePct": 0.57, "electorate": 5, "list": 0 }
+  ]
+}
